@@ -1,0 +1,15 @@
+var read = require('readline-sync')
+const fs =require('fs')
+
+var id = read.question("Enter your id: ")
+console.log(id)
+var name = read.question("Enter your name: ")
+console.log(name)
+var email = read.question("Enter your email: ")
+console.log(email)
+var phonenum = read.question("Enter your phonenum: ")
+console.log(phonenum)
+var obj=[{sayid:id,sayname:name,sayemail:email,saynum:phonenum}]
+console.log(obj)
+var string = JSON.stringify(obj)
+fs.writeFileSync('1.json',string)
